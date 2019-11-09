@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
+<link rel="stylesheet" href="/Okonkwor-Chinedu.github.io/css/design.css">
+</head>
+
+<body>
+    <h2>JavaScript - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h2>
+    <hr>
+    <h2>Loops</h2>
+
+    <h3>For Loops</h3>
+    
+    <script language="javascript" type="text/javascript">
+        function ForLoop() {
+            var fruits = ["Mango", "Orange", "Apple", "Pineapple"];
+            var i = 0;
+            var arrayLength = fruits.length;
+            var output = "";
+
+            for (; i < arrayLength; i++) {
+                output += fruits[i] + "<br>";
+            }
+
+            document.getElementById("output").innerHTML = output;
+        }
+
+        function Reset() {
+            var reset = "";
+            document.getElementById("output").innerHTML = reset;
+        }
+    </script>
+
+    <button type="button" onclick="ForLoop()">For Loop</button>
+
+    <br>
+
+    <br>
+
+    <output type="text" id="output"></output>
+
+    <br>
+
+    <button type="button" onclick="Reset()">Reset</button>
+
+    <hr>
+
+    <h3>For/In Loops</h3>
+    
+    <script language="javascript" type="text/javascript">
+        function ForInLoop() {
+            var fruits = ["Mango", "Orange", "Apple", "Pineapple"];
+            var i;
+            var output = "";
+
+            for (i in fruits) {
+                output += fruits[i] + "<br>";
+            }
+            document.getElementById("output2").innerHTML = output;
+        }
+
+        function Reset2() {
+            var reset = "";
+            document.getElementById("output2").innerHTML = reset;
+        }
+    </script>
+
+    <button type="button" onclick="ForInLoop()">For/In Loop</button>
+
+    <br>
+
+    <br>
+
+    <output type="text" id="output2"></output>
+
+    <br>
+
+    <button type="button" onclick="Reset2()">Reset</button>
+
+    <div id="output2"></div>
+
+    <hr>
+
+<h3>While Loops</h3>
+
+            <script language="javascript" type="text/javascript">
+                function WhileLoop() {
+                    var i = 0;
+                    var output = "";
+
+                    while (i <= 20) {
+                        output += 2 * i + " , ";
+                        i++;
+                    }
+
+                    document.getElementById("output3").innerHTML = output;
+                }
+
+                function Reset3() {
+                    var reset = "";
+                    document.getElementById("output3").innerHTML = reset;
+                }
+            </script>
+
+            <button type="button" onclick="WhileLoop()">While Loop</button>
+
+            <br>
+
+            <br>
+
+            <output type="text" id="output3"></output>
+
+            <br>
+
+            <button type="button" onclick="Reset3()">Reset</button>  
+            <hr>
+            
+            
+            <h3>Do While Loop</h3>
+            <script language="javascript" type="text/javascript">
+                function DoWhileLoop() {
+                    var i = 0;
+                    var text = ""
+
+                    do {
+                        text += "<br>Count " + i;
+                        i++;
+                    }
+                    while (i < 20);
+
+                    document.getElementById("demo").innerHTML = text;
+                }
+
+                function Reset4() {
+                    var reset = "";
+                    document.getElementById("demo").innerHTML = reset;
+                }
+            </script>
+
+            <button type="button" onclick="DoWhileLoop()">Do While Loop</button>
+
+            <br>
+
+            <br>
+
+            <output type="text" id="demo"></output>
+
+            <br>
+
+            <button type="button" onclick="Reset4()">Reset</button>
+            <hr>
+
+            <h2>Conditonal Statements</h2>
+            
+            <h3>If Statement</h3>
+
+            <script language="javascript" type="text/javascript">
+                function ifStatement() {
+                    var output = "";
+                    var inputHello = document.getElementById("hello");
+                    var inputBye = document.getElementById("bye");
+
+                    if (inputHello.checked) {
+                        output += inputHello.value;
+                    }
+
+                    if (inputBye.checked) {
+                        output += inputBye.value;
+                    }
+
+                    document.getElementById("output5").innerHTML = output;
+                }
+
+                function Reset4() {
+                    var reset = "";
+                    document.getElementById("output5").innerHTML = reset;
+                }
+            </script>
+
+            <label>Hello</label>
+            <input type="checkbox" id="hello" value="Hello!">
+            <label>Bye</label>
+            <input type="checkbox" id="bye" value="Bye!">
+            <br>
+            <br>
+
+            <button type="button" onclick="ifStatement()">If Statement</button>
+
+            <br>
+
+            <br>
+
+            <output type="text" id="output5"></output>
+
+            <br>
+
+            <button type="button" onclick="Reset4()">Reset</button>
+
+
+
+</body>
+
+</html>
