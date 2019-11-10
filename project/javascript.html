@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>JavaScript - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
-<link rel="stylesheet" href="/Okonkwor-Chinedu.github.io/css/design.css">
+<link rel="stylesheet" href="css/design.css">
 </head>
 
 <body>
     <h2>JavaScript - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h2>
     <hr>
     <h2>Loops</h2>
-
     <h3>For Loops</h3>
     
     <script language="javascript" type="text/javascript">
@@ -153,21 +152,22 @@
             <hr>
 
             <h2>Conditonal Statements</h2>
-            
+            <p>Conditional statements are used to decide the flow of execution based on different conditions. If a condition is true, you can perform one action and if the condition is false, you can perform another action.</p>
+ 
             <h3>If Statement</h3>
 
             <script language="javascript" type="text/javascript">
                 function ifStatement() {
                     var output = "";
-                    var inputHello = document.getElementById("hello");
-                    var inputBye = document.getElementById("bye");
+                    var inputComeIn = document.getElementById("come in");
+                    var inputGoOut = document.getElementById("go out");
 
-                    if (inputHello.checked) {
-                        output += inputHello.value;
+                    if (inputComeIn.checked) {
+                        output += inputComeIn.value;
                     }
 
-                    if (inputBye.checked) {
-                        output += inputBye.value;
+                    if (inputGoOut.checked) {
+                        output += inputGoOut.value;
                     }
 
                     document.getElementById("output5").innerHTML = output;
@@ -179,10 +179,10 @@
                 }
             </script>
 
-            <label>Hello</label>
-            <input type="checkbox" id="hello" value="Hello!">
-            <label>Bye</label>
-            <input type="checkbox" id="bye" value="Bye!">
+            <label>Come In</label>
+            <input type="checkbox" id="come in" value="Come In!">
+            <label>Go Out</label>
+            <input type="checkbox" id="go out" value="Go Out!">
             <br>
             <br>
 
@@ -198,7 +198,104 @@
 
             <button type="button" onclick="Reset4()">Reset</button>
 
+<hr>
 
+            <h3>Functions</h3>
+
+            <p>A function is a block of code designed to perform a particular task.A function is executed when "something" invokes it (calls it). A function is defined with the function keyword, followed by a name, followed by parentheses ().The parentheses may include parameter names separated by commas. The code to be executed, by the function, is placed inside curly brackets: {}</p>
+
+            <p>This example Compute and output the area of a triangle with side lengths 4, 2, and 5</p>
+            <script>
+                function testTriangle() {
+                    let r = triangleArea(4, 2, 5);
+                    document.getElementById('outputDiv').innerHTML = r;
+                }
+                function triangleArea(a, b, c) {
+            let s = (a + b + c) / 2;
+            let area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+            return area;
+            }
+
+            </script>
+
+           <button type="button" onclick="testTriangle()">Test</button>
+           <div id="outputDiv"></div>  
+           <br>
+           <hr>
+           <h3>Variables</h3>
+           <p>JavaScript variables are containers for storing data values.</p>
+
+           <p>The result of adding 5 + 2 + 3:</p>
+
+           <p> var x = 5;</p>
+            <p> var y = 2</p>
+            <p> var z = 3</p>
+            <p> total = x + y +z</p>
+            <p> total = 10</p>
+
+            <p>The result of adding 5 + 2 + 3:</p>
+
+            <p id="demo"></p>
+            
+            <script>
+            var x = 5 + 2 + 3;
+            document.getElementById("demo").innerHTML = x;
+            </script>
+
+            <br>
+            <hr>
+            <h3>Parameter</h3>
+            <p>The parameters, in a function call, are the function's arguments. JavaScript arguments are passed by value: The function only gets to know the values, not the argument's locations. </p>
+            <p>This example function passes the value of the Fahrenheit input to the function to be converted from degrees Fahrenheit to Celsius.</p>
+
+            <label>Fahrenheit: </label>
+            <input type="number" id="pass">
+            <br>
+
+            <script language="javascript" type="text/javascript">
+                function fToC(f) {
+                    var output = "";
+                    var c = (f - 32) * 5 / 9;
+
+                    output += c;
+
+                    document.getElementById("output10").innerHTML = output;
+                }
+
+                function Reset9() {
+                    var reset = "";
+                    document.getElementById("output10").innerHTML = reset;
+                }
+            </script>
+
+            <button type="button" onclick="fToC(document.getElementById('pass').value)">Fahrenheit to Celsius parameter function</button>
+
+            <br>
+
+            <br>
+
+            <output type="text" id="output10"></output>
+
+            <br>
+
+            <button type="button" onclick="Reset9()">Reset</button>
+            <br>
+            <hr>
+            <h3>Array</h3>
+            <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+            <p id="demo"></p>
+
+            <script>
+            var cars = ["Saab", "Volvo", "BMW"];
+            document.getElementById("demo").innerHTML = cars;
+            </script>
+            <p> var cars = ["John", "Paul", "Peter"];</p>
+            <p> it will display: John, Paul, Peter</p>
+            <br>
+            <hr>
+            <h3>Associative Arrays
+            </h3>
+            <p> Java doesn't support associative arrays, however this could easily be achieved using a Map.</p>
 
 </body>
 
