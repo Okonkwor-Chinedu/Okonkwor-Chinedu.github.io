@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+  
+  }
+  
+  #runner{
+     background:url("https://marionettestudio.com/wp-content/uploads/2016/10/hobbit-style-sprite-sheet-walk-left.png");
+  
+     width: 2500px;
+     height: 250px;
+  
+     animation: walk 5s steps(10) infinite;
+                forward 5s Linear infinite;
+            }
+  @keyframes walk {
+            0%
+            {
+              background-position: 0px;
+            }
+  
+            100%
+            {
+            background-position: 30000px;
+            }
+  }
+  @keyframes forward {
+            0%
+            {
+                transfrom:translatex(-100px);
+  
+            }
+            100%{
+              transform:translateX(1000px);
+            }
+  }
+  
