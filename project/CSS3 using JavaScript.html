@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>CSS3 using JavaScript</title>
+        <link rel="stylesheet" href="css/design.css">
+</head>
+<body>
+<h2>CSS3 using JavaScript</h2>
+<p>The HTML DOM allows JavaScript to change the style of HTML elements. Example bellow shows how we can CSS can be applied using JavaScript</p>
+
+<h1 id="id1">I can change to any of the primary colors if you click the right button for the color. I can also be big or small.</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'red'">
+Click me to turn red</button>
+<br>
+<br>
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'blue'">
+Click me to turn blue</button>
+<br>
+<br>
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'yellow'">
+Click me to turn yellow</button>
+<br>
+<br>
+<button type="button" 
+onclick="document.getElementById('id1').style.fontSize = '250%'">
+Click to make me big</button>
+<br>
+<br>
+<button type="button" 
+onclick="document.getElementById('id1').style.fontSize = 'small'">
+Click to make me small</button>
+
+</body>
+</html>
