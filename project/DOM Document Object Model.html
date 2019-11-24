@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM Document Object Model</title>
+        <link rel="stylesheet" href="css/design.css">
+        </head>
 <body>
+  <img src="image/prince of persia.jpg" alt="prince of persia"> 
+  <h2>DOM Document Object Model</h2>
+  <p>The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document​</p>
+<ul id="linkup">
+  <li id="word">I have learn a lot from my Fluency Evidence in CIT 261</li>
+  <li>Lets Play Basketball</li>
+  <li>Soccer is my favorite</li>
+</ul>
 
-<iframe src="/default.asp" style="height:400px;width:650px;"></iframe>
+<p>click any button below to practice  remove or insert DOM Element.</p>
 
-<div id="myDIV">
-  <span id="mySpan" style="font-size:35px;">A Span element</span>
-</div>
-
-<p>Click one button to remove the span element from its parent. Click the other button to insert the removed span element into the other document's h1 element (the new parent).</p>
-
-<button onclick="removeLi()">Remove span</button>
-<button onclick="myFunction()">Insert span</button>
+<button onclick="removeLi()">Remove</button>
+<button onclick="appendLi()">Insert Back</button>
 
 <script>
-var child = document.getElementById("mySpan");
+var x = document.getElementById("word");
 
 function removeLi() {
-  child.parentNode.removeChild(child);
+  x.parentNode.removeChild(x);
 }
 
-function myFunction() {
-  var frame = document.getElementsByTagName("IFRAME")[0]
-  var h = frame.contentWindow.document.getElementsByTagName("H1")[0];
-  var x = document.adoptNode(child);
-  h.appendChild(x);
+function appendLi() {
+  var list = document.getElementById("linkup");
+  list.appendChild(x);
 }
 </script>
 

@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Topic5</title>
+      <script>
+        function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, time to upgrade your browser";
+    }
+}
+
+function clearItems () {
+    window.localStorage.clear();
+    location.reload();
+}
+
+function populatePerson () {
+    var userFirstName = document.getElementById("firstName").value;
+    var userLastName = document.getElementById("lastName").value;
+    
+    var person = {firstName: userFirstName, lastName: userLastName};
+    
+    localStorage.setItem('user', JSON.stringify(person));
+    localStorage.setItem('browser-name', navigator.appCodeName);
+    localStorage.setItem('browser-version', navigator.appVersion);
+    localStorage.setItem('browser-cookies', navigator.cookieEnabled);
+    
+    document.getElementById("userOutput").innerHTML = "Save Completed";  
+}
+
+function setUser() {
+    var user = JSON.parse(localStorage.getItem('user'));
+    var browserName = localStorage.getItem('browser-name');
+    var browserVersion = localStorage.getItem('browser-version');
+    var browserCookies = localStorage.getItem('browser-cookies');
+
+    document.getElementById("userOutput").innerHTML = "<b>First Name:</b> " + user.firstName + "<br><b>Last Name:</b> " + user.lastName
+}
+      </script>
+    </head>
+    <body>
+   <h2>Local Storage </h2>
+                <p>Enter Your First and Last Name to Store Them in Local Storage</p>
+                <label><span>First Name:</span><input id="firstName" type="text"></label>
+            <br>
+      <br>
+
+                <label><span>Last Name:</span><input id="lastName" type="text"></label>
+      <br>
+            <br>
+
+        <button type="button" onClick="populatePerson()">Save Information</button>&nbsp;<button type="button" onClick="setUser()">Show Information</button>
+        <div id="userOutput"></div>
+    </body>
+</html>
