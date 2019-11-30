@@ -1,0 +1,86 @@
+body{
+    background:url("https://cdn.vectorstock.com/i/thumb-large/15/05/set-of-billiard-balls-realistic-vector-12771505.jpg");
+   
+    width: 2500px;
+    height: 250px;
+   
+    animation: walk 5s steps(10) infinite;
+               
+           }
+   @keyframes walk {
+           0%
+           {
+             background-position: 0px;
+           }
+   
+           100%
+           {
+           background-position: 30000px;
+           }
+   }
+   @keyframes forward {
+           0%
+           {
+               transfrom:translatex(-100px);
+   
+           }
+           100%{
+             transform:translateX(1000px);
+           }
+   }
+   
+   
+   *{
+     margin:0;
+     padding:0;
+   }
+     .button{
+       width: 190px;
+       height: 50px;
+       font-size: 30px;
+       margin: 2;
+       cursor: pointer;
+     }
+   .textview{
+     width: 763px;
+     height: 50px;
+     margin: 5px;
+     font-size:30px;
+     padding: 5;
+   }
+   
+   div{
+     align: center;
+   }
+   
+   .main {
+     margin: auto;
+     width: 30%;
+     border: 3px solid #73AD21;
+     padding: 10px;
+   }
+   
+   .main{
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #12475f;
+     color: #fff;
+     animation: color-me-in 10s infinite; 
+     
+   }
+   
+   
+   @keyframes color-me-in {
+     
+     100% {
+       background: red;
+     }
+   
+     40% {
+       background: yellow;
+     }
+   
+     100% {
+       background: blue;
+     }
+   
+    
