@@ -20,14 +20,20 @@ document.form.textview.value = document.form.textview.value+num
     }
 
   </script>
+  
+  
 <title>Final Project</title>
 <link rel="stylesheet" href="css/Final Project.css">
 </head>
-  
+  <button onclick="color()">Click me to Change Color</button> 
+  <button onclick="myFunction()">Click to Potrait</button>
+    <br>
+    <br>
+  <button type="button" onclick="Reset4()">Click to Reset</button>
 <body>
   
 <h1 style="text-align:center;">Calculator</h1>   
-<div class="main">
+<div id="container">
   <form name = "form">
     <input class="textview" name="textview">
   </form>
@@ -61,7 +67,23 @@ document.form.textview.value = document.form.textview.value+num
       <td><input class="button" type="button" value ="." onclick="insert('.')"></td>
  </tr>
       </div>
+  <script>
+    var container = document.querySelector("#container");
   
+    function color() {
+        var colorChange = "#" + Math.floor(Math.random() * 0xFFFFFF).toString(16);
+       container.style.backgroundColor = colorChange;
+    }
+  </script>
 </body>
+  <script>
+    function myFunction() {
+    document.getElementById("container").style.transform = "rotate(90deg)"; 
+  }
+      function Reset4() {
+                      var reset = "";
+                      document.getElementById("container").style.transform = reset;
+                  }
+  </script>
   
 </html>
